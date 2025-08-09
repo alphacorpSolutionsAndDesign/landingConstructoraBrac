@@ -1,0 +1,19 @@
+.body__index
+    .index__header
+        .header__hero
+            background: url('../img/index/hero-mobile.png')
+            background-repeat: no-repeat
+            background-size: 100dvw 800px
+            background-position: right 0
+
+            @include media-breakpoint('sm')
+                background: url('../img/index/hero.png')
+                background-repeat: no-repeat
+                background-size: 1280px 800px
+                background-position-x: center
+
+            @include media-breakpoint('xl')
+                background: url('../img/index/hero.png')
+                background-repeat: no-repeat
+                background-size: 100dvw auto
+                background-position: right 0
