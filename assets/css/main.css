@@ -36,6 +36,14 @@
   background: #022560;
 }
 
+.bg__white {
+  background: #f3f4f6;
+}
+
+.bg__white {
+  background: #f3f4f6;
+}
+
 html, body {
   width: 100%;
   height: -moz-fit-content;
@@ -144,6 +152,86 @@ a {
 
 /* LAYOUT */
 /* COMPONENTS */
+.button-primary-blue {
+  background: #1B468E;
+}
+
+.button-primary-blue:hover {
+  background: #022560;
+}
+
+.button-primary-blue:focus {
+  background: #000;
+}
+
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-1 {
+  background: url("../img/index/iconic-projects/cat1-off.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-2 {
+  background: url("../img/index/iconic-projects/cat2-off.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-3 {
+  background: url("../img/index/iconic-projects/cat3-off.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-4 {
+  background: url("../img/index/iconic-projects/cat4-off.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-5 {
+  background: url("../img/index/iconic-projects/cat5-off.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button p {
+  color: #a1a1a1;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-1 {
+  background: url("../img/index/iconic-projects/cat1-on.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-2 {
+  background: url("../img/index/iconic-projects/cat2-on.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-3 {
+  background: url("../img/index/iconic-projects/cat3-on.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-4 {
+  background: url("../img/index/iconic-projects/cat4-on.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-5 {
+  background: url("../img/index/iconic-projects/cat5-on.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true p {
+  color: #1B468E;
+  font-weight: bold;
+}
+
 /* PAGES */
 .body__index .index__header .header__hero {
   background: url("../img/index/hero-mobile.png");
@@ -165,6 +253,26 @@ a {
     background-repeat: no-repeat;
     background-size: 100dvw auto;
     background-position: right 0;
+  }
+}
+.body__index .index__main .main__we-build {
+  background: url("../img/index/bg_we-build.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.body__index .index__main .main__iconic-projects {
+  background: url("../img/index/bg_iconic-projects_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 640px) {
+  .body__index .index__main .main__iconic-projects {
+    background: url("../img/index/bg_iconic-projects.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 

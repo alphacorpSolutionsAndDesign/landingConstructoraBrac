@@ -17,3 +17,22 @@
                 background-repeat: no-repeat
                 background-size: 100dvw auto
                 background-position: right 0
+
+    .index__main
+        .main__we-build
+            background: url('../img/index/bg_we-build.png')
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+
+        .main__iconic-projects
+            background: url('../img/index/bg_iconic-projects_mobile.png')
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+
+            @include media-breakpoint('sm')
+                background: url('../img/index/bg_iconic-projects.png')
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center

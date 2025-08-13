@@ -14,12 +14,18 @@
     <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"></script>
+    <!-- Counters Animation -->
+    <script defer src="assets/js/animateCount.js"></script>
+    <!-- Carousel -->
+    <script defer src="assets/js/carousel.js"></script>
+    <!-- Modal -->
+    <script defer src="assets/js/modals.js"></script>
 
     <title>Constructora Brac</title>
 </head>
 <body class="body__index">
-    <header class="index__header">
-        <nav class="header__nav w-full h-26 xl:h-22 fixed top-0">
+    <header class="index__header w-dvw">
+        <nav class="header__nav w-dvw h-26 xl:h-22 fixed top-0 z-10">
             <div class="mx-auto max-w-7xl">
                 <div class="relative bg__blue shadow-xl/20 flex h-20 xl:h-16 rounded-3xl xl:rounded-2xl items-center mt-3 mx-4 lg:mx-7">
                     <div class="absolute inset-y-0 right-5 flex items-center md:hidden">
@@ -145,23 +151,426 @@
             </el-disclosure>
         </nav>
         <div class="header__hero w-dvw h-200">
-            <div class="hero__content w-90 lg:w-120 xl:w-140 pt-52 lg:pt-70 mx-5 lg:mx-9">
-                <h1 class="text-title text-white">
+            <div class="hero__content w-dvw xl:w-300 pt-52 lg:pt-70 pl-5 lg:pl-9 xl:mx-auto">
+                <h1 class="text-title text-white w-90 lg:w-120 xl:w-140">
                     Experiencia y calidad desde 1996
                 </h1>
-                <p class="text-headline text-white mt-3">
+                <p class="text-headline text-white w-90 lg:w-120 xl:w-140 mt-3">
                     Construimos desde galpones hasta hogares en la IV Región
                 </p>
+                <a
+                    href="#"
+                    class="text-sm font-medium text-white"
+                    target="_blank"
+                >
+                    <button class="button-primary-blue cursor-pointer text-gray-50 font-bold py-2 px-4 mt-20 lg:mt-15 rounded-full">
+                        Quiero saber más
+                    </button>
+                </a>
             </div>
         </div>
     </header>
 
-    <main class="index__main">
+    <main class="index__main w-dvw">
+        <!-- We Build Section -->
+        <section class="main__we-build" id="weBuild">
+            <div class="we-build__content xl:w-300 xl:mx-auto pb-20">
+                <div class="content__top text-center text-blue pt-20 mx-8">
+                    <h1 class="text-title">
+                        Construimos como sabemos
+                    </h1>
+                    <p class="text-headline mt-5">
+                        con experiencia
+                    </p>
+                </div>
+                <div class="content__bottom">
+                    <div class="bottom__cards grid grid-cols-1 lg:grid-cols-3 mt-20">
+                        <!-- Card 1 -->
+                        <div class="card w-71 h-93 bg__white rounded-3xl mx-auto">
+                            <img class="w-26 mt-20 mx-auto" src="assets/img/index/we-build_card1.png" alt="Card 1">
+                            <div class="card-body text-blue text-center mt-15">
+                                <div class="flex justify-center">
+                                    <h3 class="counters text-3xl font-bold" data-target="150000">
+                                        +0 
+                                    </h3>
+                                    <p class="text-3xl font-bold">&nbsp;m<sup>2</sup></p>
+                                </div>
+                                <p>
+                                    Total de m<sup>2</sup> construidos
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card w-71 h-93 bg__white rounded-3xl my-15 lg:my-0 mx-auto">
+                            <img class="w-26 mt-20 mx-auto" src="assets/img/index/we-build_card2.png" alt="Card 2">
+                            <div class="card-body text-blue text-center mt-15">
+                                <h3 class="counters text-3xl font-bold" data-target="60">
+                                    +0
+                                </h3>
+                                <p>
+                                    Cantidad de proyectos
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card w-71 h-93 bg__white rounded-3xl mx-auto">
+                            <img class="w-26 mt-20 mx-auto" src="assets/img/index/we-build_card3.png" alt="Card 3">
+                            <div class="card-body text-blue text-center mt-15">
+                                <h3 class="counters text-3xl font-bold" data-target="20">
+                                    +0
+                                </h3>
+                                <p class="mx-5">
+                                    Cantidad de proyectos comerciales construidos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Iconic Proyects Section -->
+        <section class="main__iconic-projects" id="iconicProjects">
+            <div class="iconic-projects__content xl:w-300 xl:mx-auto">
+                <div class="content__top text-center md:text-right text-blue pt-20 mx-12 md:mx-0">
+                    <h1 class="text-title">
+                        Nuestros proyectos icónicos
+                    </h1>
+                    <p class="text-headline mt-5">
+                        Descúbrelos acá
+                    </p>
+                </div>
+                <div class="content__bottom py-30 relative">
+                    <!-- Carousel Mobile-->
+                    <div class="carousel carousel-mobile md:hidden relative w-full max-w-2xl ml-auto">
+                        <div class="carousel-content rounded-3xl overflow-hidden">
+                            <!-- Slides -->
+                            <div class="carousel-content flex transition-transform duration-1000" id="carouselSlides">
+                                <!-- Slide 1 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="rounded-3xl mx-auto" src="assets/img/index/iconic-projects/cat1-mobile.png" alt="Slide 1">
+                                    <div class="absolute w-full top-80 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-center text-shadow-sm">Habitacional</p>
+                                        <button class="w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="rounded-3xl mx-auto" src="assets/img/index/iconic-projects/cat2-mobile.png" alt="Slide 2">
+                                    <div class="absolute w-full top-80 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-center text-shadow-sm">Comercial</p>
+                                        <button class="w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="rounded-3xl mx-auto" src="assets/img/index/iconic-projects/cat3-mobile.png" alt="Slide 3">
+                                    <div class="absolute w-full top-80 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-center text-shadow-sm">Educacional</p>
+                                        <button class="w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="rounded-3xl mx-auto" src="assets/img/index/iconic-projects/cat4-mobile.png" alt="Slide 4">
+                                    <div class="absolute w-full top-80 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-center text-shadow-sm">Salud</p>
+                                        <button class="w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 5 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="rounded-3xl mx-auto" src="assets/img/index/iconic-projects/cat5-mobile.png" alt="Slide 5">
+                                    <div class="absolute w-full top-80 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-center text-shadow-sm">Industrial</p>
+                                        <button class="w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Next Button -->
+                        <button class="absolute" id="next"></button>
+                        <!-- Prev Button -->
+                        <button class="absolute" id="prev"></button>
+
+                        <!-- Indicators -->
+                        <div class="carousel-indicators absolute -bottom-15 left-1/2 -translate-x-1/2 flex space-x-2" id="carouselIndicators">
+                            <button class="size-4 rounded-full bg-white opacity-100 hover:opacity-100 mr-2" data-slide="0"></button>
+                            <button class="size-4 rounded-full bg-white opacity-70 hover:opacity-100 mx-2" data-slide="1"></button>
+                            <button class="size-4 rounded-full bg-white opacity-70 hover:opacity-100 mx-2" data-slide="2"></button>
+                            <button class="size-4 rounded-full bg-white opacity-70 hover:opacity-100 mx-2" data-slide="3"></button>
+                            <button class="size-4 rounded-full bg-white opacity-70 hover:opacity-100 ml-2" data-slide="4"></button>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Desktop-->
+                    <div class="carousel carousel-desktop hidden md:block relative w-full max-w-2xl ml-auto mr-5">
+                        <div class="carousel-content rounded-3xl overflow-hidden">
+                            <!-- Slides -->
+                            <div class="flex transition-transform duration-1000" id="carouselSlides">
+                                <!-- Slide 1 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="w-168 h-95" src="assets/img/index/iconic-projects/cat1.png" alt="Slide 1">
+                                    <div class="absolute w-full top-62 left-10 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-shadow-sm">Habitacional</p>
+                                        <button
+                                            class="openModal w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-5 rounded-full"
+                                            data-target="modal1"
+                                        >
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="w-168 h-95" src="assets/img/index/iconic-projects/cat2.png" alt="Slide 2">
+                                    <div class="absolute w-full top-62 left-10 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-shadow-sm">Comercial</p>
+                                        <button
+                                            class="openModal w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-5 rounded-full"
+                                            data-target="modal2"
+                                        >
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="w-168 h-95" src="assets/img/index/iconic-projects/cat3.png" alt="Slide 3">
+                                    <div class="absolute w-full top-62 left-10 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-shadow-sm">Educacional</p>
+                                        <button
+                                            class="openModal w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-5 rounded-full"
+                                            data-target="modal3"
+                                        >
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="w-168 h-95" src="assets/img/index/iconic-projects/cat4.png" alt="Slide 4">
+                                    <div class="absolute w-full top-62 left-10 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-shadow-sm">Salud</p>
+                                        <button
+                                            class="openModal w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-5 rounded-full"
+                                            data-target="modal4"
+                                        >
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 5 -->
+                                <div class="w-full flex-shrink-0 relative">
+                                    <img class="w-168 h-95" src="assets/img/index/iconic-projects/cat5.png" alt="Slide 5">
+                                    <div class="absolute w-full top-62 left-10 text-gray-50 flex flex-col justify-center">
+                                        <p class="text-4xl font-bold text-shadow-sm">Industrial</p>
+                                        <button
+                                            class="openModal w-fit bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-5 rounded-full"
+                                            data-target="modal5"
+                                        >
+                                            Ver proyectos
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Next Button -->
+                        <button class="absolute" id="next"></button>
+                        <!-- Prev Button -->
+                        <button class="absolute" id="prev"></button>
+
+                        <!-- Indicators -->
+                        <div class="carousel-indicators flex flex-col absolute bottom-0 -left-70 -translate-x-1/2 space-x-2" id="carouselIndicators">
+                            <button class="size-25 opacity-100! mb-1 true" data-slide="0">
+                                <div class="indicator-1 size-15 rounded-full -mt-2 mx-auto"></div>
+                                <p class="text-center mt-1">Habitacional</p>
+                            </button>
+                            <button class="size-25 opacity-100! my-1" data-slide="1">
+                                <div class="indicator-2 size-15 rounded-full -mt-2 mx-auto"></div>
+                                <p class="text-center mt-1">Comercial</p>
+                            </button>
+                            <button class="size-25 opacity-100! my-1" data-slide="2">
+                                <div class="indicator-3 size-15 rounded-full -mt-2 mx-auto"></div>
+                                <p class="text-center mt-1">Educacional</p>
+                            </button>
+                            <button class="size-25 opacity-100! my-1" data-slide="3">
+                                <div class="indicator-4 size-15 rounded-full -mt-2 mx-auto"></div>
+                                <p class="text-center mt-1">Salud</p>
+                            </button>
+                            <button class="size-25 opacity-100! mt-1" data-slide="4">
+                                <div class="indicator-5 size-15 rounded-full -mt-2 mx-auto"></div>
+                                <p class="text-center mt-1">Industrial</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="index__footer">
 
     </footer>
+
+    <!-- Modals -->
+        <!-- Mobile -->
+
+        <!-- Desktop -->
+            <!-- Modal 1 -->
+            <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal1">
+                <div class="modal-content fixed size-full bg__blue flex items-center justify-center">
+                    <div class="content-container bg-gray-950/10 w-9/10 h-9/10 relative">
+                        <div class="modal-header">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute -top-4 -right-10 p-1"
+                                data-target="modal1"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="modal-body size-full">
+                            <div class="modal-info w-2/10 h-full text-gray-50 bg-gray-950/10">
+                                <h3 class="text-2xl font-bold">Habitacional</h3>
+                            </div>
+                            <div class="modal-media w-8/10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 2 -->
+            <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal2">
+                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
+                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                        <div class="modal-header">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                data-target="modal2"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-info">
+
+                            </div>
+                            <div class="modal-media"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 3 -->
+            <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal3">
+                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
+                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                        <div class="modal-header">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                data-target="modal3"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-info">
+
+                            </div>
+                            <div class="modal-media"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 4 -->
+            <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal4">
+                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
+                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                        <div class="modal-header">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                data-target="modal4"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-info">
+
+                            </div>
+                            <div class="modal-media"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 5 -->
+            <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal5">
+                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
+                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                        <div class="modal-header">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                data-target="modal5"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-info">
+
+                            </div>
+                            <div class="modal-media"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </body>
 </html>
