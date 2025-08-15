@@ -40,6 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             index = -1
             index = (currentIndex += 1) % totalSlides;
             updateCarousel(index);
-        }, 3100);
+        }, 5000);
     });
 });
