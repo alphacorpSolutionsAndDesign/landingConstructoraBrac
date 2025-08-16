@@ -234,14 +234,14 @@ a {
 
 /* PAGES */
 .body__index .index__header .header__hero {
-  background: url("../img/index/hero-mobile.png");
+  background: url("../img/index/header/background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 100dvw 800px;
   background-position: right 0;
 }
 @media (min-width: 640px) {
   .body__index .index__header .header__hero {
-    background: url("../img/index/hero.png");
+    background: url("../img/index/header/background.jpg");
     background-repeat: no-repeat;
     background-size: 1280px 800px;
     background-position-x: center;
@@ -249,27 +249,27 @@ a {
 }
 @media (min-width: 1280px) {
   .body__index .index__header .header__hero {
-    background: url("../img/index/hero.png");
+    background: url("../img/index/header/background.jpg");
     background-repeat: no-repeat;
     background-size: 100dvw auto;
     background-position: right 0;
   }
 }
 .body__index .index__main .main__we-build {
-  background: url("../img/index/bg_we-build.png");
+  background: url("../img/index/we-build/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .body__index .index__main .main__iconic-projects {
-  background: url("../img/index/bg_iconic-projects_mobile.png");
+  background: url("../img/index/iconic-projects/background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 640px) {
   .body__index .index__main .main__iconic-projects {
-    background: url("../img/index/bg_iconic-projects.png");
+    background: url("../img/index/iconic-projects/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
