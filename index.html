@@ -18,9 +18,9 @@
         <!-- Counters Animation -->
         <script src="assets/js/animateCount.js"></script>
         <!-- Carousel -->
-        <script src="assets/js/carousel.js"></script>
+        <script type="module" src="assets/js/carousel.js"></script>
         <!-- Modal -->
-        <script src="assets/js/modals.js"></script>
+        <script type="module" src="assets/js/modals.js"></script>
 
     <title>Constructora Brac</title>
 </head>
@@ -443,6 +443,11 @@
                 </div>
             </div>
         </section>
+
+        <!-- Our Completions Section -->
+        <section class="main__our-completions" id="ourCompletions">
+
+        </section>
     </main>
 
     <footer class="index__footer">
@@ -474,7 +479,7 @@
                             </div>
                             <div class="modal-media w-full h-19/20 mt-5">
                                 <!-- Carousel -->
-                                <div class="carousel size-full md:hidden relative">
+                                <div class="carousel size-full relative">
                                     <div class="carousel-content size-full overflow-hidden">
                                         <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
                                             <!-- Slide 1 -->
@@ -546,7 +551,7 @@
                             </div>
                             <div class="modal-media w-full h-19/20 mt-5">
                                 <!-- Carousel -->
-                                <div class="carousel size-full md:hidden relative">
+                                <div class="carousel size-full relative">
                                     <div class="carousel-content size-full overflow-hidden">
                                         <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
                                             <!-- Slide 1 -->
@@ -632,7 +637,7 @@
                             </div>
                             <div class="modal-media w-full h-19/20 mt-5">
                                 <!-- Carousel -->
-                                <div class="carousel size-full md:hidden relative">
+                                <div class="carousel size-full relative">
                                     <div class="carousel-content size-full overflow-hidden">
                                         <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
                                             <!-- Slide 1 -->
@@ -697,7 +702,7 @@
                             </div>
                             <div class="modal-media w-full h-19/20 mt-5">
                                 <!-- Carousel -->
-                                <div class="carousel size-full md:hidden relative">
+                                <div class="carousel size-full relative">
                                     <div class="carousel-content size-full overflow-hidden">
                                         <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
                                             <!-- Slide 1 -->
@@ -755,7 +760,7 @@
                             </div>
                             <div class="modal-media w-full h-19/20 mt-5">
                                 <!-- Carousel -->
-                                <div class="carousel size-full md:hidden relative">
+                                <div class="carousel size-full relative">
                                     <div class="carousel-content size-full overflow-hidden">
                                         <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
                                             <!-- Slide 1 -->
@@ -808,7 +813,7 @@
             <!-- Modal 1 -->
             <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal1">
                 <div class="modal-content fixed size-full bg__blue flex items-center justify-center">
-                    <div class="content-container bg-gray-950/10 w-9/10 h-9/10 relative">
+                    <div class="content-container w-9/10 h-9/10 relative">
                         <div class="modal-header">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -822,11 +827,71 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </div>
-                        <div class="modal-body size-full">
-                            <div class="modal-info w-2/10 h-full text-gray-50 bg-gray-950/10">
+                        <div class="modal-body size-full relative">
+                            <div class="modal-info size-fit text-gray-50 absolute">
                                 <h3 class="text-2xl font-bold">Habitacional</h3>
                             </div>
-                            <div class="modal-media w-8/10"></div>
+                            <div class="modal-media size-full">
+                                <!-- Carousel -->
+                                <div class="carousel size-full relative">
+                                    <div class="carousel-content size-full overflow-hidden">
+                                        <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
+                                            <!-- Slide 1 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/habitacional/01.jpg" alt="Slide 1">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Casa NN</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/habitacional/02.jpg" alt="Slide 2">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Casa NB</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 3 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-240 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/habitacional/03.jpg" alt="Slide 3">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Casa O</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 4 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/habitacional/04.jpg" alt="Slide 4">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Casa MD</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Nav Buttons -->
+                                    <div class="absolute text-gray-100 top-18/20 right-0">
+                                        <!-- Prev Button -->
+                                        <button class="cursor-pointer" id="prev">
+                                            &#10094;
+                                        </button>
+                                        <!-- Next Button -->
+                                        <button class="cursor-pointer ml-4" id="next">
+                                            &#10095;
+                                        </button>
+                                    </div>
+
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators hidden absolute top-18/20 left-1/2 -translate-x-1/2 flex space-x-2" id="carouselIndicators">
+                                        <button class="size-4 rounded-full bg-white opacity-100 hover:opacity-100 mr-2" data-slide="0"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="1"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="2"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="3"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -834,8 +899,8 @@
 
             <!-- Modal 2 -->
             <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal2">
-                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
-                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                <div class="modal-content fixed size-full bg__blue flex items-center justify-center">
+                    <div class="content-container w-9/10 h-9/10 relative">
                         <div class="modal-header">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -843,17 +908,95 @@
                                 viewBox="0 0 24 24"
                                 stroke-width="1.5"
                                 stroke="currentColor"
-                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute -top-4 -right-10 p-1"
                                 data-target="modal2"
                             >
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </div>
-                        <div class="modal-body">
-                            <div class="modal-info">
-
+                        <div class="modal-body size-full relative">
+                            <div class="modal-info size-fit text-gray-50 absolute">
+                                <h3 class="text-2xl font-bold">Comercial</h3>
                             </div>
-                            <div class="modal-media"></div>
+                            <div class="modal-media size-full">
+                                <!-- Carousel -->
+                                <div class="carousel size-full relative">
+                                    <div class="carousel-content size-full overflow-hidden">
+                                        <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
+                                            <!-- Slide 1 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/comercial/01.jpg" alt="Slide 1">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Local<br>Twin</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/comercial/02.jpg" alt="Slide 2">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Restaurant<br>Tololo Beach</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 3 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/comercial/03.jpg" alt="Slide 3">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Restaurant<br>Bakulic</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 4 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/comercial/04.jpg" alt="Slide 4">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Restaurant<br>La Estación</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 5 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/comercial/05.jpg" alt="Slide 5">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Strip<br>Center</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 6 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/comercial/06.jpg" alt="Slide 6">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Destilería<br>Pisco Mistral</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Nav Buttons -->
+                                    <div class="absolute text-gray-100 top-18/20 right-0">
+                                        <!-- Prev Button -->
+                                        <button class="cursor-pointer" id="prev">
+                                            &#10094;
+                                        </button>
+                                        <!-- Next Button -->
+                                        <button class="cursor-pointer ml-4" id="next">
+                                            &#10095;
+                                        </button>
+                                    </div>
+
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators hidden absolute top-18/20 left-1/2 -translate-x-1/2 flex space-x-2" id="carouselIndicators">
+                                        <button class="size-4 rounded-full bg-white opacity-100 hover:opacity-100 mr-2" data-slide="0"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="1"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="2"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="3"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="4"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="5"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -861,8 +1004,8 @@
 
             <!-- Modal 3 -->
             <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal3">
-                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
-                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                <div class="modal-content fixed size-full bg__blue flex items-center justify-center">
+                    <div class="content-container w-9/10 h-9/10 relative">
                         <div class="modal-header">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -870,17 +1013,68 @@
                                 viewBox="0 0 24 24"
                                 stroke-width="1.5"
                                 stroke="currentColor"
-                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute -top-4 -right-10 p-1"
                                 data-target="modal3"
                             >
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </div>
-                        <div class="modal-body">
-                            <div class="modal-info">
-
+                        <div class="modal-body size-full relative">
+                            <div class="modal-info size-fit text-gray-50 absolute">
+                                <h3 class="text-2xl font-bold">Educacional</h3>
                             </div>
-                            <div class="modal-media"></div>
+                            <div class="modal-media size-full">
+                                <!-- Carousel -->
+                                <div class="carousel size-full relative">
+                                    <div class="carousel-content size-full overflow-hidden">
+                                        <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
+                                            <!-- Slide 1 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/educacional/01.jpg" alt="Slide 1">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Colegio<br>Arturo Prat</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/educacional/02.jpg" alt="Slide 2">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Colegio<br>José Manuel Balmaceda</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 3 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/educacional/03.jpg" alt="Slide 3">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Colegio<br>del Alba</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Nav Buttons -->
+                                    <div class="absolute text-gray-100 top-18/20 right-0">
+                                        <!-- Prev Button -->
+                                        <button class="cursor-pointer" id="prev">
+                                            &#10094;
+                                        </button>
+                                        <!-- Next Button -->
+                                        <button class="cursor-pointer ml-4" id="next">
+                                            &#10095;
+                                        </button>
+                                    </div>
+
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators hidden absolute top-18/20 left-1/2 -translate-x-1/2 flex space-x-2" id="carouselIndicators">
+                                        <button class="size-4 rounded-full bg-white opacity-100 hover:opacity-100 mr-2" data-slide="0"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="1"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="2"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -888,8 +1082,8 @@
 
             <!-- Modal 4 -->
             <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal4">
-                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
-                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                <div class="modal-content fixed size-full bg__blue flex items-center justify-center">
+                    <div class="content-container w-9/10 h-9/10 relative">
                         <div class="modal-header">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -897,17 +1091,59 @@
                                 viewBox="0 0 24 24"
                                 stroke-width="1.5"
                                 stroke="currentColor"
-                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute -top-4 -right-10 p-1"
                                 data-target="modal4"
                             >
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </div>
-                        <div class="modal-body">
-                            <div class="modal-info">
-
+                        <div class="modal-body size-full relative">
+                            <div class="modal-info size-fit text-gray-50 absolute">
+                                <h3 class="text-2xl font-bold">Salud</h3>
                             </div>
-                            <div class="modal-media"></div>
+                            <div class="modal-media size-full">
+                                <!-- Carousel -->
+                                <div class="carousel size-full relative">
+                                    <div class="carousel-content size-full overflow-hidden">
+                                        <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
+                                            <!-- Slide 1 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/salud/01.jpg" alt="Slide 1">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Cesfam<br>Juan Pablo II</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/salud/02.jpg" alt="Slide 2">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Cesfam<br>Punitaqui</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Nav Buttons -->
+                                    <div class="absolute text-gray-100 top-18/20 right-0">
+                                        <!-- Prev Button -->
+                                        <button class="cursor-pointer" id="prev">
+                                            &#10094;
+                                        </button>
+                                        <!-- Next Button -->
+                                        <button class="cursor-pointer ml-4" id="next">
+                                            &#10095;
+                                        </button>
+                                    </div>
+
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators hidden absolute top-18/20 left-1/2 -translate-x-1/2 flex space-x-2" id="carouselIndicators">
+                                        <button class="size-4 rounded-full bg-white opacity-100 hover:opacity-100 mr-2" data-slide="0"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="1"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -915,8 +1151,8 @@
 
             <!-- Modal 5 -->
             <div class="modal hidden absolute size-full top-0 left-0 z-40" id="modal5">
-                <div class="modal-content fixed size-full bg-gray-950/90 flex items-center justify-center">
-                    <div class="content-container bg-gray-300 w-9/10 h-9/10 relative">
+                <div class="modal-content fixed size-full bg__blue flex items-center justify-center">
+                    <div class="content-container w-9/10 h-9/10 relative">
                         <div class="modal-header">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -924,20 +1160,80 @@
                                 viewBox="0 0 24 24"
                                 stroke-width="1.5"
                                 stroke="currentColor"
-                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute top-4 right-5 p-1"
+                                class="closeModal text-gray-50/70 size-8 cursor-pointer w-8 h-8 bg__button-purple-neumorphic rounded-full absolute -top-4 -right-10 p-1"
                                 data-target="modal5"
                             >
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </div>
-                        <div class="modal-body">
-                            <div class="modal-info">
-
+                        <div class="modal-body size-full relative">
+                            <div class="modal-info size-fit text-gray-50 absolute">
+                                <h3 class="text-2xl font-bold">Industrial</h3>
                             </div>
-                            <div class="modal-media"></div>
+                            <div class="modal-media size-full">
+                                <!-- Carousel -->
+                                <div class="carousel size-full relative">
+                                    <div class="carousel-content size-full overflow-hidden">
+                                        <div class="carousel-content size-full flex transition-transform duration-1000" id="carouselSlides">
+                                            <!-- Slide 1 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/industrial/01.jpg" alt="Slide 1">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Mall<br>Chino</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/industrial/02.jpg" alt="Slide 2">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Mega<br>Star</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 3 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/industrial/03.jpg" alt="Slide 3">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">CCU<br>Planta Socos</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 4 -->
+                                            <div class="size-full flex flex-shrink-0 text-gray-50 relative">
+                                                <img class="w-220 rounded-xl self-center mt-2 ml-auto" src="assets/img/index/projects/industrial/04.jpg" alt="Slide 4">
+                                                <div class="info absolute left-5 top-10">
+                                                    <p class="text-md font-bold mt-15">Galpón<br>CPS</p>
+                                                    <p class="mt-5">Superficie m<sup>2</sup></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Nav Buttons -->
+                                    <div class="absolute text-gray-100 top-18/20 right-0">
+                                        <!-- Prev Button -->
+                                        <button class="cursor-pointer" id="prev">
+                                            &#10094;
+                                        </button>
+                                        <!-- Next Button -->
+                                        <button class="cursor-pointer ml-4" id="next">
+                                            &#10095;
+                                        </button>
+                                    </div>
+
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators hidden absolute top-18/20 left-1/2 -translate-x-1/2 flex space-x-2" id="carouselIndicators">
+                                        <button class="size-4 rounded-full bg-white opacity-100 hover:opacity-100 mr-2" data-slide="0"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="1"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="2"></button>
+                                        <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="3"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
 </body>
 </html>

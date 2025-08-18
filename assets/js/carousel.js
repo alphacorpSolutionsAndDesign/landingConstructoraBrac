@@ -1,45 +1,76 @@
+import { updateCarousel } from './carouselUtils.js'
+
 document.addEventListener('DOMContentLoaded', () => {
     const carousels = document.querySelectorAll(".carousel");
     
     carousels.forEach(carousel => {
         const slides = carousel.querySelector("#carouselSlides");
         const indicators = carousel.querySelectorAll("#carouselIndicators button");
-        const nextButton = carousel.querySelector("#next");
         const prevButton = carousel.querySelector("#prev");
+        const nextButton = carousel.querySelector("#next");
         const totalSlides = indicators.length;
         let currentIndex = 0;
+        let startX = 0;
+        let endX = 0;
 
-        const updateCarousel = (index) => {
-            slides.style.transform = `translateX(-${index * 100}%)`;
-            indicators.forEach((btn, i) => {
-                btn.classList.toggle('opacity-100', i === index);
-                btn.classList.toggle('opacity-50', i !== index);
-                btn.classList.add('active', i === index);
-                btn.classList.remove('active', i !== index);
-            });
-        };
+        // const updateCarousel = (index) => {
+        //     slides.style.transform = `translateX(-${index * 100}%)`;
+        //     indicators.forEach((btn, i) => {
+        //         btn.classList.toggle('opacity-100', i === index);
+        //         btn.classList.toggle('opacity-50', i !== index);
+        //         btn.classList.add('active', i === index);
+        //         btn.classList.remove('active', i !== index);
+        //     });
+        // };
+
+        // Buttons
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel(currentIndex, slides, indicators);
+        });
 
         nextButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % totalSlides;
-            updateCarousel();
+            updateCarousel(currentIndex, slides, indicators);
         });
 
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        });
-
+        // Indicators
         indicators.forEach(btn => {
             btn.addEventListener('click', () => {
                 currentIndex = parseInt(btn.getAttribute("data-slide"));
-                updateCarousel(currentIndex);
+                updateCarousel(currentIndex, slides, indicators);
             });
         });
 
+        // Autoplay
         setInterval(() => {
-            index = -1
+            let index = -1
             index = (currentIndex += 1) % totalSlides;
-            updateCarousel(index);
+            updateCarousel(index, slides, indicators);
         }, 5000);
+
+        // Mobile Swipe
+        slides.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        slides.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        const handleSwipe = () => {
+            const diff = startX - endX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    // Swipe Left to Right
+                    currentIndex = (currentIndex + 1) % totalSlides; 
+                } else {
+                    // Swipe Right to Left
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                };
+                updateCarousel(currentIndex, slides, indicators);
+            }
+        };
     });
 });
