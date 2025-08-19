@@ -13,16 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let startX = 0;
         let endX = 0;
 
-        // const updateCarousel = (index) => {
-        //     slides.style.transform = `translateX(-${index * 100}%)`;
-        //     indicators.forEach((btn, i) => {
-        //         btn.classList.toggle('opacity-100', i === index);
-        //         btn.classList.toggle('opacity-50', i !== index);
-        //         btn.classList.add('active', i === index);
-        //         btn.classList.remove('active', i !== index);
-        //     });
-        // };
-
         // Buttons
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;

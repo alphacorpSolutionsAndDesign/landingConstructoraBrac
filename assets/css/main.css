@@ -4,28 +4,26 @@
 /* COLORS */
 /* VENDORS */
 /* BASE */
-@media (min-width: 768px) {
-  .bg__glass {
-    background: rgba(20, 20, 20, 0.3) !important;
-    -webkit-backdrop-filter: blur(7px) !important;
-            backdrop-filter: blur(7px) !important;
-  }
+.bg__glass {
+  background: rgba(20, 20, 20, 0.3) !important;
+  -webkit-backdrop-filter: blur(7px) !important;
+          backdrop-filter: blur(7px) !important;
 }
 
-@media (min-width: 768px) {
-  .bg__light-glass {
-    background: rgba(240, 240, 240, 0.75) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-            backdrop-filter: blur(8px) !important;
-  }
+.bg__light-glass {
+  background: rgba(240, 240, 240, 0.75) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+          backdrop-filter: blur(8px) !important;
 }
 
-@media (min-width: 768px) {
-  .bg__dark-glass {
-    background: rgba(7, 7, 7, 0.75) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-            backdrop-filter: blur(8px) !important;
-  }
+.bg__dark-glass {
+  background: rgba(7, 7, 7, 0.75) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+          backdrop-filter: blur(8px) !important;
+}
+
+.bg__light {
+  background: rgba(255, 255, 255, 0.5) !important;
 }
 
 .bg__blue {
@@ -49,6 +47,10 @@ html, body {
   height: -moz-fit-content;
   height: fit-content;
   background: #022560;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -272,6 +274,34 @@ a {
     background: url("../img/index/iconic-projects/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+  }
+}
+.body__index .index__main .main__our-course {
+  background: url("../img/index/our-course/background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 640px) {
+  .body__index .index__main .main__our-course {
+    background: url("../img/index/our-course/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.body__index .index__footer {
+  background: url("../img/index/footer/background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100dvh 100%;
+  background-position: center;
+}
+@media (min-width: 640px) {
+  .body__index .index__footer {
+    background: url("../img/index/footer/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100dvw 100%;
     background-position: center;
   }
 }
