@@ -47,10 +47,7 @@ html, body {
   height: -moz-fit-content;
   height: fit-content;
   background: #022560;
-}
-
-html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body::-webkit-scrollbar {
@@ -166,139 +163,149 @@ a {
   background: #000;
 }
 
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-1 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button .indicator-1 {
   background: url("../img/index/iconic-projects/cat1-off.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-2 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button .indicator-2 {
   background: url("../img/index/iconic-projects/cat2-off.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-3 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button .indicator-3 {
   background: url("../img/index/iconic-projects/cat3-off.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-4 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button .indicator-4 {
   background: url("../img/index/iconic-projects/cat4-off.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button .indicator-5 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button .indicator-5 {
   background: url("../img/index/iconic-projects/cat5-off.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button p {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button p {
   color: #a1a1a1;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-1 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button.true .indicator-1 {
   background: url("../img/index/iconic-projects/cat1-on.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-2 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button.true .indicator-2 {
   background: url("../img/index/iconic-projects/cat2-on.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-3 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button.true .indicator-3 {
   background: url("../img/index/iconic-projects/cat3-on.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-4 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button.true .indicator-4 {
   background: url("../img/index/iconic-projects/cat4-on.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true .indicator-5 {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button.true .indicator-5 {
   background: url("../img/index/iconic-projects/cat5-on.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects .iconic-projects__content .content__bottom .carousel-desktop .carousel-indicators button.true p {
+.iconic-projects .iconic-projects__content .content__bottom .carousel .carousel-indicators button.true p {
   color: #1B468E;
   font-weight: bold;
 }
 
 /* PAGES */
-.body__index .index__header .header__hero {
+.hero {
   background: url("../img/index/header/background-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 100dvw 800px;
+  background-size: 100%;
   background-position: right 0;
 }
 @media (min-width: 640px) {
-  .body__index .index__header .header__hero {
+  .hero {
     background: url("../img/index/header/background.jpg");
     background-repeat: no-repeat;
-    background-size: 1280px 800px;
+    background-size: cover;
     background-position-x: center;
   }
 }
 @media (min-width: 1280px) {
-  .body__index .index__header .header__hero {
+  .hero {
     background: url("../img/index/header/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100dvw auto;
+    background-size: cover;
     background-position: right 0;
   }
 }
-.body__index .index__main .main__we-build {
-  background: url("../img/index/we-build/background.jpg");
+
+.build-cards {
+  background: url("../img/index/build-cards/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
 }
-.body__index .index__main .main__iconic-projects {
+
+.iconic-projects {
   background: url("../img/index/iconic-projects/background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 640px) {
-  .body__index .index__main .main__iconic-projects {
+  .iconic-projects {
     background: url("../img/index/iconic-projects/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 }
-.body__index .index__main .main__our-course {
+
+.our-course {
   background: url("../img/index/our-course/background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 640px) {
-  .body__index .index__main .main__our-course {
+  .our-course {
     background: url("../img/index/our-course/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 }
-.body__index .index__footer {
+
+.footer .footer__content .content__top {
+  background: url("../img/index/cta/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer .footer__content .content__bottom {
   background: url("../img/index/footer/background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 100dvh 100%;
   background-position: center;
 }
 @media (min-width: 640px) {
-  .body__index .index__footer {
+  .footer .footer__content .content__bottom {
     background: url("../img/index/footer/background.jpg");
     background-repeat: no-repeat;
     background-size: 100dvw 100%;
