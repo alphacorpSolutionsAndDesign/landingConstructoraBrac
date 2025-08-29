@@ -44,14 +44,21 @@
 
 html, body {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  background: #022560;
-  scroll-behavior: auto !important;
+  height: 100%;
+  background: #f3f4f6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+body.noscroll {
+  overflow: hidden;
+  touch-action: none;
 }
 
 a {
@@ -134,6 +141,15 @@ a {
   .text-headline {
     font-size: 32px;
     line-height: 40px;
+  }
+}
+
+.modal-title {
+  font-size: 30px;
+}
+@media (min-width: 1024px) {
+  .modal-title {
+    font-size: 36px;
   }
 }
 
