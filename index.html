@@ -15,8 +15,6 @@
         <!-- Tailwind -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"></script>
-        <!-- JQuery -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Navigation Menu -->
         <script src="assets/js/nav.js"></script>
         <!-- Counters Animation -->
@@ -91,35 +89,30 @@
                                     href="#hero"
                                     class="pl-7 py-5 pr-4 text-sm font-medium text-gray-300 hover:text-white"
                                     aria-current="page"
-                                    data-fpv="0"
                                 >
                                     Inicio
                                 </a>
                                 <a
                                     href="#buildCards"
                                     class="py-5 px-3 text-sm font-medium text-gray-300 hover:text-white"
-                                    data-fpv="1"
                                 >
                                     Experiencia
                                 </a>
                                 <a
                                     href="#iconicProjects"
                                     class="py-5 px-3 text-sm font-medium text-gray-300 hover:text-white"
-                                    data-fpv="2"
                                 >
                                     Proyectos
                                 </a>
                                 <a
                                     href="#team"
                                     class="py-5 px-3 text-sm font-medium text-gray-300 hover:text-white"
-                                    data-fpv="5"
                                 >
                                     Equipo
                                 </a>
                                 <a
                                     href="#leadership"
                                     class="py-5 px-3 text-sm font-medium text-gray-300 hover:text-white"
-                                    data-fpv="6"
                                 >
                                     Liderazgo
                                 </a>
@@ -127,7 +120,6 @@
                                     <a
                                         href="#footer"
                                         class="text-sm font-medium text-white"
-                                        data-fpv="8"
                                     >
                                         <button class="bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 rounded-full">
                                             Contáctanos
@@ -183,10 +175,10 @@
             </el-disclosure>
         </nav>
     </header>
-    <div id="fullpage">
+    <main>
         <!-- Sections -->
         <!-- Hero Section -->
-        <div class="section hero" id="hero">
+        <section class="section hero" id="hero">
             <div class="hero__content h-dvh xl:w-300 pt-52 lg:pt-70 pl-5 lg:pl-9 xl:mx-auto">
                 <h1 class="text-title text-white w-90 lg:w-120 xl:w-140">
                     Experiencia y calidad desde 1996
@@ -203,7 +195,7 @@
                     </button>
                 </a>
             </div>
-        </div>
+        </section>
 
         <!-- Build Cards Section -->
         <section class="section build-cards" id="buildCards">
@@ -958,8 +950,8 @@
         </section>
 
         <!-- Footer Section -->
-        <section class="section footer bg-gray-50" id="footer">
-            <div class="footer__content h-dvh ">
+        <footer class="section footer" id="footer">
+            <div class="footer__content h-dvh">
                 <div class="content__top h-6/10">
                     <div class="top lg:w-full xl:w-320 lg:px-10 mx-auto pt-[15dvh] lg:pt-[20dvh]">
                         <div class="info text-white text-shadow-md/20 text-center lg:text-end">
@@ -1002,9 +994,11 @@
                                     </a>
                                 </div>
                                 <div class="text-center">
-                                    <button class="bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
-                                        Conoce nuestra inmobiliaria
-                                    </button>
+                                    <a href="https://www.inmobiliarialh.cl" target="_blank">
+                                        <button class="bg-gray-50 focus:bg-zinc-700 outline-3 outline-zinc-700/10 cursor-pointer text-blue hover:text-gray-950! focus:text-gray-50! font-bold py-2 px-4 mt-10 rounded-full mx-auto">
+                                            Conoce nuestra inmobiliaria
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1016,8 +1010,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </footer>
+    </main>
 
     <!-- Modals -->
         <!-- Modal 1 -->
@@ -1059,7 +1053,7 @@
                                                 <img class="hidden lg:block w-480 h-full" src="assets/img/index/projects/habitacional/01.jpg" alt="Slide 1">
                                             </div>
                                             <div class="info w-full lg:w-fit text-center absolute left-1/2 lg:left-10 -translate-x-1/2 lg:translate-x-0 -bottom-1 lg:bottom-15">
-                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa NN | Superficie 5000 m<sup>2</sup></p>
+                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa NN</p>
                                             </div>
                                         </div>
                                         <!-- Slide 2 -->
@@ -1069,7 +1063,7 @@
                                                 <img class="hidden lg:block w-480 h-full" src="assets/img/index/projects/habitacional/02.jpg" alt="Slide 2">
                                             </div>
                                             <div class="info w-full lg:w-fit text-center absolute left-1/2 lg:left-10 -translate-x-1/2 lg:translate-x-0 -bottom-1 lg:bottom-15">
-                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa NB | Superficie 5000 m<sup>2</sup></p>
+                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa NB</p>
                                             </div>
                                         </div>
                                         <!-- Slide 3 -->
@@ -1079,7 +1073,7 @@
                                                 <img class="hidden lg:block w-480 h-full" src="assets/img/index/projects/habitacional/03.jpg" alt="Slide 3">
                                             </div>
                                             <div class="info w-full lg:w-fit text-center absolute left-1/2 lg:left-10 -translate-x-1/2 lg:translate-x-0 -bottom-1 lg:bottom-15">
-                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa O | Superficie 5000 m<sup>2</sup></p>
+                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa O</p>
                                             </div>
                                         </div>
                                         <!-- Slide 4 -->
@@ -1089,7 +1083,17 @@
                                                 <img class="hidden lg:block w-480 h-full" src="assets/img/index/projects/habitacional/04.jpg" alt="Slide 4">
                                             </div>
                                             <div class="info w-full lg:w-fit text-center absolute left-1/2 lg:left-10 -translate-x-1/2 lg:translate-x-0 -bottom-1 lg:bottom-15">
-                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa MD | Superficie 5000 m<sup>2</sup></p>
+                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa MD</p>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 5 -->
+                                        <div class="size-full flex flex-shrink-0 text-gray-50 relative px-3 mx-auto">
+                                            <div class="img h-[90%] rounded-xl self-center mx-auto flex items-end overflow-hidden">
+                                                <img class="lg:hidden h-full" src="assets/img/index/projects/habitacional/05-mobile.jpg" alt="Slide 5">
+                                                <img class="hidden lg:block w-480 h-full" src="assets/img/index/projects/habitacional/05.jpg" alt="Slide 5">
+                                            </div>
+                                            <div class="info w-full lg:w-fit text-center absolute left-1/2 lg:left-10 -translate-x-1/2 lg:translate-x-0 -bottom-1 lg:bottom-15">
+                                                <p class="text-md font-bold text-shadow-sm text-shadow-gray-600 mt-15">Casa T</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1113,6 +1117,7 @@
                                     <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="1"></button>
                                     <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 mx-2" data-slide="2"></button>
                                     <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 ml-2" data-slide="3"></button>
+                                    <button class="size-4 rounded-full bg-white opacity-50 hover:opacity-100 ml-2" data-slide="4"></button>
                                 </div>
                             </div>
                         </div>

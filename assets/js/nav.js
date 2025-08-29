@@ -43,11 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scrolling Behavior
+    // Scrolling & Touch Swipe Events
     document.addEventListener('wheel', handleScroll, { passive: false });
     document.addEventListener('touchstart', handleTouchStart, { passive: false });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
     document.addEventListener('touchend', handleTouchEnd, { passive: false });
 
+    // Scrolling & Touch Swipe Behavior
     const sections = document.querySelectorAll(".section");
     let isScrolling = false;
     let touchStartY = 0;
@@ -72,16 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function handleTouchStart(e) {
-        const diff = Math.round(touchStartY - touchEndY);
+        touchStartY = e.touches[0].clientY;
+        document.body.classList.add('noscroll');
+    };
 
-        if (diff <= (-10) || diff >= 10) {
+    function handleTouchMove(e) {
+        if (e.cancelable) {
             e.preventDefault();
         };
-        
-        touchStartY = e.touches[0].clientY;
     };
 
     function handleTouchEnd(e) {
+        document.body.classList.remove('noscroll');
+
+        let delta = e.deltaY;
+
         touchEndY = e.changedTouches[0].clientY;
         if (isScrolling) return;
 
@@ -90,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Math.abs(diff) < 70) return;
 
         const wheelEvent = new WheelEvent('wheel', {
-            deltaY: diff > 0 ? 10 : -10,
+            deltaY: diff > 0 ? 0.1 : -0.1,
             bubbles: true,
             cancelable: true
         });
